@@ -6,7 +6,8 @@
       </figure>
     </a>
     <section>
-      <h2 class="text-xl font-medium text-slate-600 mt-4 mb-4">Heahphones for you</h2>
+      <h2 class="text-xl font-medium text-slate-600 mt-4 mb-4">Recent Products</h2>
+      <p-message v-show="newItem" :life=6000 :sticky='false' severity="success">You successfully added this item to the cart.</p-message>
       <div class="flex">
         <!-- Article for the Store -->
         <article class="bg-slate-50 hover:bg-slate-100 rounded-lg px-4 py-3 flex justify-between flex-col">
@@ -22,7 +23,7 @@
             <div class="flex justify-between items-center">
               <p class="text-slate-500">$0.00</p>
               <div class="flex">
-                <a href="#" class="flex w-4 h-4 lg:w-48 p-4 bg-emerald-800 items-center justify-center text-white text-center rounded-full"><i class="pi pi-shopping-bag"></i></a>
+                <a @click="buyNewItem" class="flex w-4 h-4 lg:w-48 p-4 bg-emerald-800 items-center justify-center text-white text-center rounded-full"><i class="pi pi-shopping-bag"></i></a>
               </div>
             </div>
           </div>
@@ -34,7 +35,7 @@
                 <p class="text-slate-500">$0.00</p>
               </div>
                 <p class="text-xs text-slate-500">Category</p>
-                <a href="#" class="block mt-3 py-2 w-full bg-emerald-800 hover:bg-emerald-900 text-white text-center rounded-lg"><i class="pi pi-shopping-bag mr-2"></i>Add to Cart</a>
+                <a  @click="buyNewItem" class="block mt-3 py-2 w-full bg-emerald-800 hover:bg-emerald-900 text-white text-center rounded-lg"><i class="pi pi-shopping-bag mr-2"></i>Add to Cart</a>
             </div>
           </div>
         </article>
@@ -44,11 +45,31 @@
 </template>
 
 <script>
+import Message from 'primevue/message';
+
 export default {
+  components: {
+    "p-message": Message,
+  },
   data() {
     return {
-
+      newItem: false,
     }
   },
+  methods: {
+    buyNewItem() {
+      this.newItem = true 
+      try {
+      }
+      finally {
+        setTimeout(() => {
+          this.newItem = false;
+        }, 7000)
+      }
+    },
+    toggle() {
+      this.newItem = false
+    }
+  }
 }
 </script>
