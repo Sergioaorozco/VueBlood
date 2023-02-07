@@ -34,8 +34,9 @@ export default {
   data() {
     return {
       mainLogo,
+      StoreProducts: {},
       quantity: 4
     }
-  },
+  }
 }
 </script>

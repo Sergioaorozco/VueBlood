@@ -1,15 +1,13 @@
 <script>
 import loginUser from './components/loginUser.vue'
 import shoppingCart from './components/shoppingCart.vue'
-import Message from 'primevue/message';
-import Toast from 'primevue/toast';
+import { useProductStore } from './stores/productStore.js'
+useProductStore();
 
 export default {
   components: {
     'v-login': loginUser,
     'v-cart': shoppingCart,
-    "p-message": Message,
-    'p-toast': Toast
   },
   data(){
     return {
@@ -18,14 +16,6 @@ export default {
       buyItem: false,
     }
   },
-  methods: {
-    handleUserSubmit(user){
-      console.log(user)
-    }
-  },
-  watch: {
-    // cartArray(){}
-  }
 }
 </script>
 
@@ -35,7 +25,6 @@ export default {
       <v-login/>
     </nav>
     <main class="wrapper mt-4">
-      <p-message v-if="buyItem" :life=6000 :sticky='false' severity="success">You successfully added this item to the cart.</p-message>
       <v-cart/>
     </main>
   </div>

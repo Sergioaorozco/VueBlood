@@ -35,7 +35,7 @@
                 <p class="text-slate-500">$0.00</p>
               </div>
                 <p class="text-xs text-slate-500">Category</p>
-                <a  @click="buyNewItem" class="block mt-3 py-2 w-full bg-emerald-800 hover:bg-emerald-900 text-white text-center rounded-lg"><i class="pi pi-shopping-bag mr-2"></i>Add to Cart</a>
+                <a  @click="buyNewItem" class="block mt-3 py-2 w-full bg-emerald-800 hover:bg-emerald-900 text-white text-center rounded-lg select-none"><i class="pi pi-shopping-bag mr-2"></i>Add to Cart</a>
             </div>
           </div>
         </article>
@@ -66,9 +66,6 @@ export default {
           this.newItem = false;
         }, 7000)
       }
-    },
-    toggle() {
-      this.newItem = false
     }
   }
 }
