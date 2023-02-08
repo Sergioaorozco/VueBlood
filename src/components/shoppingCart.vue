@@ -48,7 +48,7 @@ export default {
         <!-- Article for the Store -->
         <article v-for="item in productStore.products" :key="item.id" class="bg-slate-50 hover:bg-slate-100 rounded-lg px-4 py-3 flex justify-between flex-col">
           <a href="#" target="blank">
-            <figure class="h-32 w-fit lg:h-60 m-auto rounded-md overflow-hidden self-center">
+            <figure class="h-32 w-auto lg:h-60 m-auto rounded-md overflow-hidden self-center">
                 <img class="w-full object-contain h-full hover:scale-110 transition-all" :src="item.image" alt="headphones">
             </figure>
           </a>
