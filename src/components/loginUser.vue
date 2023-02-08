@@ -5,13 +5,13 @@
       <a href="#" target="blank">
         <img class=" w-36" :src="mainLogo" alt="">
       </a>
-      <searchProduct  class="hidden lg:contents"/>
+      <searchProduct class="hidden lg:contents"/>
       </div>
       <div>
         <ul class="flex gap-4 items-center">
           <li><a href="#" target="blank" class="rounded-full w-4 h-4 py-2 px-3 bg-slate-100 hover:text-white hover:transition-all hover:bg-teal-900 transition-all"><i class="pi pi-user lg:mr-1"></i><span class="hidden lg:contents">Account</span></a></li>
           <li class="relative">
-            <a href="#" target="blank" class="rounded-full w-4 h-4 py-2 px-3 bg-slate-100 hover:text-white hover:transition-all hover:bg-teal-900 transition-all">
+            <a @click="displayCart" target="blank" class="select-none rounded-full w-4 h-4 py-2 px-3 bg-slate-100 hover:text-white hover:transition-all hover:bg-teal-900 transition-all">
               <i class="pi pi-shopping-cart lg:mr-1"></i>
               <span class="hidden lg:contents">Cart</span>
               <!-- Items Quantity -->
@@ -21,22 +21,52 @@
         </ul>
       </div>
     </div>
+      <section v-if="showCart" class="relative">
+      <!-- Cart modal information -->
+        <div class="absolute w-96 h-auto min-h-20 bg-white px-4 py-4 flex justify-center flex-col z-10 right-1 rounded-md">
+          <p class="self-left">Cart Items</p>
+          <i class="divider"></i>
+          <ul>
+            <li v-for="item in selectedItems" :key="item.id" class="border-b-2 text-slate-500 text-sm"></li>
+            <li class="mb-2 font-bold text-lg text-slate-500">Order Total <span class="float-right font-normal">${{productStore.priceFixed(100)}}</span></li>
+          </ul>
+          <div class="flex gap-3 justify-between">
+            <a href="#" class="px-4 py-1 w-full rounded-full text-center bg-teal-600 text-white" target="_blank">Let's pay</a>
+            <a href="#" class="px-5 py-1 w-full rounded-full text-center bg-slate-700 text-white" target="_blank">See the Cart</a>
+          </div>
+        </div>
+          <!-- Close Cart -->
+        <div  @click="closeCart" class="overlay"></div>
+      </section>
   </div>
 </template>
+<script setup>
+import { useProductStore } from '../stores/ProductStore.js';
+const productStore = useProductStore();
+productStore.pullProducts();
+productStore.priceFixed();
+</script>
+
 <script>
   import mainLogo from '../images/mainLogo.svg';
   import searchProduct from '../components/searchProduct.vue';
-export default {
+  export default {
   components: {
     mainLogo,
-    searchProduct
+    searchProduct,
   },
   data() {
     return {
       mainLogo,
       StoreProducts: {},
-      quantity: 4
+      quantity: 4,
+      selectedItems: [],
+      showCart: false
     }
+  },
+  methods: {
+    displayCart(){ this.showCart = true; },
+    closeCart() {this.showCart = false; }
   }
 }
-</script>
+</script>;

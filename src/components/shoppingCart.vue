@@ -17,8 +17,9 @@ export default {
     }
   },
   methods: {
-    buyNewItem() {
+    buyNewItem(item) {
       this.newItem = true 
+      console.log(item)
       try {
       }
       finally {
@@ -32,6 +33,7 @@ export default {
     }
   }
 }
+
 </script>
 
 <template>
@@ -59,7 +61,7 @@ export default {
             <div class="flex justify-between items-center">
               <p class="text-slate-500">${{priceFixed(item.price)}}</p>
               <div class="flex">
-                <a @click="buyNewItem" class="flex w-4 h-4 lg:w-48 p-4 bg-teal-600 transition-all items-center justify-center text-white text-center rounded-full"><i class="pi pi-shopping-bag"></i></a>
+                <a @click="buyNewItem" data-store="item" class="flex w-4 h-4 lg:w-48 p-4 bg-teal-600 transition-all items-center justify-center text-white text-center rounded-full"><i class="pi pi-shopping-bag"></i></a>
               </div>
             </div>
           </div>

@@ -12,3 +12,20 @@
 .text-cart {
   font-size: 0.5rem;
 }
+
+.overlay {
+  background-color: rgba(0,0,0,.6);
+  backdrop-filter: blur(1px);
+  top:0;
+  left:0;
+  height: 100vh;
+  position:fixed;
+  width: 100vw;
+}
+
+.divider {
+  border: 0;
+  border-bottom: 1px solid var(--surface-300);
+  margin-bottom: 1em;
+  margin-top: 0.5em;
+}

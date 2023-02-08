@@ -12,7 +12,6 @@ import 'primeicons/primeicons.css'
 
 // Initialize PrimeVue and Vue
 const pinia = createPinia();
-export default pinia;
 const vue = createApp(App);
 vue
   .use(pinia)
