@@ -54,12 +54,12 @@ export default {
           </a>
           <!-- Image and Price for mobile -->
           <div class="lg:hidden">
-            <p class="mt-1 text-xs text-slate-500">{{item.category}}</p>
-            <p class="font-bold text-sm text-slate-600 text-ellipsis overflow-hidden truncate w-[15ch]">{{item.title}}</p>
+            <p class="mt-3 font-bold text-sm text-slate-600 text-ellipsis overflow-hidden truncate w-[15ch]">{{item.title}}</p>
+            <p class="text-xs text-slate-500">{{item.category}}</p>
             <div class="flex justify-between items-center">
               <p class="text-slate-500">${{priceFixed(item.price)}}</p>
               <div class="flex">
-                <a @click="buyNewItem" class="flex w-4 h-4 lg:w-48 p-4 bg-emerald-800 items-center justify-center text-white text-center rounded-full"><i class="pi pi-shopping-bag"></i></a>
+                <a @click="buyNewItem" class="flex w-4 h-4 lg:w-48 p-4 bg-teal-600 transition-all items-center justify-center text-white text-center rounded-full"><i class="pi pi-shopping-bag"></i></a>
               </div>
             </div>
           </div>
@@ -70,8 +70,8 @@ export default {
                 <p class="font-bold text-sm text-slate-600 text-ellipsis overflow-hidden truncate">{{item.title}}</p>
               </div>
                 <p class="text-xs text-slate-500">{{item.category}}</p>
-                <div class="mt-3 flex justify-between items-center">
-                <a  @click="buyNewItem" class="block py-2 px-2 w-2/3 bg-emerald-800 hover:bg-emerald-900 text-white text-center rounded-full select-none"><i class="hidden lg:contents pi pi-shopping-bag mr-2"></i>Add to Cart</a>
+                <div class="mt-4 flex justify-between items-center">
+                <a  @click="buyNewItem" class="block py-1 w-3/5 bg-teal-600 border-teal-900 transition-all hover:bg-emerald-900 text-white text-center rounded-full select-none"><i class="hidden lg:contents pi pi-shopping-bag mr-2"></i>Add to Cart</a>
                 <p class="text-slate-500 text-lg font-bold">${{priceFixed(item.price)}}</p>
                 </div>
             </div>
