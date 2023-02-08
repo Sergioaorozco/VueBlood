@@ -1,9 +1,9 @@
-<script>
-import loginUser from './components/loginUser.vue'
-import shoppingCart from './components/shoppingCart.vue'
-import { useProductStore } from './stores/productStore.js'
-useProductStore();
+<script setup>
+import loginUser from './components/loginUser.vue';
+import shoppingCart from './components/shoppingCart.vue';
 
+</script>
+<script>
 export default {
   components: {
     'v-login': loginUser,

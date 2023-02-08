@@ -1,14 +1,20 @@
 import { defineStore } from 'pinia';
 // Products in Our app
-let products = fetch('https://dummyjson.com/products').then(res => res.json())
+let products = [];
+async function fetchProductsJSON() {
+  const response = await fetch('https://dummyjson.com/products');
+  let items = await response.json();
+  products.push(...items.products)
+}
+fetchProductsJSON();
 
-export const useProductStore = defineStore("productStore", {
+export const useProductStore = defineStore('productStore', {
   // States
-  state: () => {
+  state:() => {
     return {
-      products,
-    }
-  }
+      products
+      }
+    },
   // Action
   // Getters
-} )
+})
