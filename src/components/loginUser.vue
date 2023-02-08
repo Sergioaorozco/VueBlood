@@ -38,7 +38,7 @@
               <li class="mt-6 mb-4 font-bold text-lg text-slate-500">Order Total<span class="float-right font-normal">${{productStore.priceFixed(100)}}</span></li>
             </ul>
             <div class="mt-2 flex gap-3 justify-between">
-              <a href="#" class="px-4 py-1 w-full rounded-full text-center bg-teal-600 text-white" target="_blank">Let's pay</a>
+              <a href="#" class="px-4 py-1 w-full rounded-full text-center bg-teal-600 text-white" target="_blank">Checkout</a>
               <a href="#" class="px-5 py-1 w-full rounded-full text-center bg-slate-700 text-white" target="_blank">See the Cart</a>
             </div>
           </div>
