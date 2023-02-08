@@ -83,6 +83,6 @@ productStore.priceFixed();
 </script>;
 
 <style scoped>
-  .p-message { margin: 0;}
+  .p-message { margin: 3px 0;}
   .cancel.pi { font-size: 10px; }
 </style>
