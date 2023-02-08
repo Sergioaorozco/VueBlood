@@ -48,8 +48,8 @@ export default {
         <!-- Article for the Store -->
         <article v-for="item in productStore.products" :key="item.id" class="bg-slate-50 hover:bg-slate-100 rounded-lg px-4 py-3 flex justify-between flex-col">
           <a href="#" target="blank">
-            <figure class="h-32 w-32 lg:h-60 lg:w-80 rounded-md overflow-hidden self-center">
-                <img class="w-full object-contain h-full hover:scale-110 transition-all lg:m-auto" :src="item.image" alt="headphones">
+            <figure class="h-32 w-fit lg:h-60 m-auto rounded-md overflow-hidden self-center">
+                <img class="w-full object-contain h-full hover:scale-110 transition-all" :src="item.image" alt="headphones">
             </figure>
           </a>
           <!-- Image and Price for mobile -->
@@ -68,10 +68,12 @@ export default {
             <div>
               <div class="mt-2 flex justify-between items-center">
                 <p class="font-bold text-sm text-slate-600 text-ellipsis overflow-hidden truncate">{{item.title}}</p>
-                <p class="text-slate-500">${{priceFixed(item.price)}}</p>
               </div>
                 <p class="text-xs text-slate-500">{{item.category}}</p>
-                <a  @click="buyNewItem" class="block mt-3 py-2 w-full bg-emerald-800 hover:bg-emerald-900 text-white text-center rounded-lg select-none"><i class="pi pi-shopping-bag mr-2"></i>Add to Cart</a>
+                <div class="mt-3 flex justify-between items-center">
+                <a  @click="buyNewItem" class="block py-2 w-1/2 bg-emerald-800 hover:bg-emerald-900 text-white text-center rounded-lg select-none"><i class="pi pi-shopping-bag mr-2"></i>Add to Cart</a>
+                <p class="text-slate-500 text-lg font-bold">${{priceFixed(item.price)}}</p>
+                </div>
             </div>
           </div>
         </article>
