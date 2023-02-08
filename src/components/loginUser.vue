@@ -26,9 +26,16 @@
         <div class="absolute w-96 h-auto min-h-20 bg-white px-4 py-4 flex justify-center flex-col z-10 right-1 rounded-md">
           <p class="self-left">Cart Items</p>
           <div v-if="selectedItems.length">
-            <ul>
-              <li v-for="item in selectedItems" :key="item.id" class="border-b-[1px] text-slate-500 text-sm py-1 mt-1">{{item.product}}<span class="float-right">${{productStore.priceFixed(33)}}</span> </li>
-              <li class="mt-6 mb-4 font-bold text-lg text-slate-500">Order Total <span class="float-right font-normal">${{productStore.priceFixed(100)}}</span></li>
+            <ul class="px-2">
+              <li v-for="item in selectedItems" :key="item.id" class="flex justify-between items-center border-b-[1px] text-slate-500 text-sm py-2 mt-1">{{item.product}}
+                <div class="flex items-center gap-2">
+                  <span class="">${{productStore.priceFixed(33)}}</span>
+                  <span class="flex justify-center items-center w-5 h-5 hover:bg-slate-500 rounded-full transition-all hover:text-white border-[1px] border-slate-500 p-0.5">
+                    <i class="cancel pi pi-times"></i>
+                  </span>
+                </div>
+              </li>
+              <li class="mt-6 mb-4 font-bold text-lg text-slate-500">Order Total<span class="float-right font-normal">${{productStore.priceFixed(100)}}</span></li>
             </ul>
             <div class="mt-2 flex gap-3 justify-between">
               <a href="#" class="px-4 py-1 w-full rounded-full text-center bg-teal-600 text-white" target="_blank">Let's pay</a>
@@ -77,4 +84,5 @@ productStore.priceFixed();
 
 <style scoped>
   .p-message { margin: 0;}
+  .cancel.pi { font-size: 10px; }
 </style>
