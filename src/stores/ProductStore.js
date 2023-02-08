@@ -2,9 +2,9 @@ import { defineStore } from 'pinia';
 // Products in Our app
 let products = [];
 async function fetchProductsJSON() {
-  const response = await fetch('https://dummyjson.com/products');
+  const response = await fetch('https://fakestoreapi.com/products')
   let items = await response.json();
-  products.push(...items.products)
+  return products.push(...items)
 }
 fetchProductsJSON();
 
