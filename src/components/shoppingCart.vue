@@ -1,6 +1,7 @@
 <script setup>
 import { useProductStore } from '../stores/ProductStore.js';
 const productStore= useProductStore();
+productStore.pullProducts();
 </script>
 
 <script>
@@ -48,7 +49,7 @@ export default {
         <article v-for="item in productStore.products" :key="item.id" class="bg-slate-50 hover:bg-slate-100 rounded-lg px-4 py-3 flex justify-between flex-col">
           <a href="#" target="blank">
             <figure class="h-32 w-32 lg:h-60 lg:w-80 rounded-md overflow-hidden self-center">
-                <img class="w-full object-cover h-full hover:scale-110 transition-all" :src="item.image" alt="headphones">
+                <img class="w-full object-contain h-full hover:scale-110 transition-all lg:m-auto" :src="item.image" alt="headphones">
             </figure>
           </a>
           <!-- Image and Price for mobile -->
