@@ -21,7 +21,7 @@
         </ul>
       </div>
     </div>
-      <section v-if="showCart" class="relative">
+      <section v-if="showCart" class="relative hidden md:block">
       <!-- Cart modal information -->
         <div class="absolute w-96 h-auto min-h-20 bg-white px-4 py-4 flex justify-center flex-col z-10 right-1 rounded-md">
           <p class="self-left">Cart Items</p>
@@ -30,7 +30,7 @@
             <li v-for="item in selectedItems" :key="item.id" class="border-b-2 text-slate-500 text-sm"></li>
             <li class="mb-2 font-bold text-lg text-slate-500">Order Total <span class="float-right font-normal">${{productStore.priceFixed(100)}}</span></li>
           </ul>
-          <div class="flex gap-3 justify-between">
+          <div class="mt-2 flex gap-3 justify-between">
             <a href="#" class="px-4 py-1 w-full rounded-full text-center bg-teal-600 text-white" target="_blank">Let's pay</a>
             <a href="#" class="px-5 py-1 w-full rounded-full text-center bg-slate-700 text-white" target="_blank">See the Cart</a>
           </div>
