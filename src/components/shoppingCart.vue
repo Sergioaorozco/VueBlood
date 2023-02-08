@@ -71,7 +71,7 @@ export default {
               </div>
                 <p class="text-xs text-slate-500">{{item.category}}</p>
                 <div class="mt-3 flex justify-between items-center">
-                <a  @click="buyNewItem" class="block py-2 w-1/2 bg-emerald-800 hover:bg-emerald-900 text-white text-center rounded-lg select-none"><i class="pi pi-shopping-bag mr-2"></i>Add to Cart</a>
+                <a  @click="buyNewItem" class="block py-2 px-2 w-2/3 bg-emerald-800 hover:bg-emerald-900 text-white text-center rounded-full select-none"><i class="hidden lg:contents pi pi-shopping-bag mr-2"></i>Add to Cart</a>
                 <p class="text-slate-500 text-lg font-bold">${{priceFixed(item.price)}}</p>
                 </div>
             </div>
