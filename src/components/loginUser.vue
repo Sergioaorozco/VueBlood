@@ -25,15 +25,17 @@
       <!-- Cart modal information -->
         <div class="absolute w-96 h-auto min-h-20 bg-white px-4 py-4 flex justify-center flex-col z-10 right-1 rounded-md">
           <p class="self-left">Cart Items</p>
-          <i class="divider"></i>
-          <ul>
-            <li v-for="item in selectedItems" :key="item.id" class="border-b-2 text-slate-500 text-sm"></li>
-            <li class="mb-2 font-bold text-lg text-slate-500">Order Total <span class="float-right font-normal">${{productStore.priceFixed(100)}}</span></li>
-          </ul>
-          <div class="mt-2 flex gap-3 justify-between">
-            <a href="#" class="px-4 py-1 w-full rounded-full text-center bg-teal-600 text-white" target="_blank">Let's pay</a>
-            <a href="#" class="px-5 py-1 w-full rounded-full text-center bg-slate-700 text-white" target="_blank">See the Cart</a>
+          <div v-if="selectedItems.length">
+            <ul>
+              <li v-for="item in selectedItems" :key="item.id" class="border-b-[1px] text-slate-500 text-sm py-1 mt-1">{{item.product}}<span class="float-right">${{productStore.priceFixed(33)}}</span> </li>
+              <li class="mt-6 mb-4 font-bold text-lg text-slate-500">Order Total <span class="float-right font-normal">${{productStore.priceFixed(100)}}</span></li>
+            </ul>
+            <div class="mt-2 flex gap-3 justify-between">
+              <a href="#" class="px-4 py-1 w-full rounded-full text-center bg-teal-600 text-white" target="_blank">Let's pay</a>
+              <a href="#" class="px-5 py-1 w-full rounded-full text-center bg-slate-700 text-white" target="_blank">See the Cart</a>
+            </div>
           </div>
+          <Message class="my-0" :closable=false v-else>There is no items in your cart</Message>
         </div>
           <!-- Close Cart -->
         <div  @click="closeCart" class="overlay"></div>
@@ -49,11 +51,13 @@ productStore.priceFixed();
 
 <script>
   import mainLogo from '../images/mainLogo.svg';
+  import Message from 'primevue/message';
   import searchProduct from '../components/searchProduct.vue';
   export default {
   components: {
     mainLogo,
     searchProduct,
+    Message
   },
   data() {
     return {
@@ -66,7 +70,11 @@ productStore.priceFixed();
   },
   methods: {
     displayCart(){ this.showCart = true; },
-    closeCart() {this.showCart = false; }
+    closeCart() {this.showCart = false; },
   }
 }
 </script>;
+
+<style scoped>
+  .p-message { margin: 0;}
+</style>
