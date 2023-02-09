@@ -23,6 +23,7 @@
     </div>
       <section v-if="showCart" class="relative hidden md:block">
       <!-- Cart modal information -->
+        <div class="arrowUp z-20"></div>
         <div class="absolute w-96 h-auto min-h-20 bg-white px-4 py-4 flex justify-center flex-col z-10 right-1 rounded-md">
           <p class="self-left">Cart Items</p>
           <div v-if="selectedItems.length">
@@ -88,4 +89,14 @@ productStore.priceFixed();
 <style scoped>
   .p-message { margin: 3px 0;}
   .cancel.pi { font-size: 10px; }
+  .arrowUp {
+  width: 0; 
+  height: 0; 
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 12px solid white;
+  position: absolute;
+  right: 25px;
+  top: -11px;
+}
 </style>
