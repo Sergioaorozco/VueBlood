@@ -27,9 +27,9 @@
           <p class="self-left">Cart Items</p>
           <div v-if="selectedItems.length">
             <ul class="px-2">
-              <li v-for="item in selectedItems" :key="item.id" class="flex justify-between items-center border-b-[1px] text-slate-500 text-sm py-2 mt-1">{{item.product}}
+              <li v-for="item in selectedItems" :key="item.id" class="flex justify-between items-center border-b-[1px] text-slate-500 text-sm py-2 mt-1">{{item.name}}
                 <div class="flex items-center gap-2">
-                  <span class="">${{productStore.priceFixed(33)}}</span>
+                  <span class="">${{productStore.priceFixed(item.price)}}</span>
                   <span class="flex justify-center items-center w-5 h-5 hover:bg-slate-500 rounded-full transition-all hover:text-white border-[1px] border-slate-500 p-0.5">
                     <i class="cancel pi pi-times"></i>
                   </span>
@@ -42,7 +42,7 @@
               <a href="#" class="px-5 py-1 w-full rounded-full text-center bg-slate-700 text-white" target="_blank">See the Cart</a>
             </div>
           </div>
-          <Message class="my-0" :closable=false v-else>There is no items in your cart</Message>
+          <Message class="my-0" :closable=false v-else>There are no items in your cart.</Message>
         </div>
           <!-- Close Cart -->
         <div  @click="closeCart" class="overlay"></div>
@@ -71,7 +71,10 @@ productStore.priceFixed();
       mainLogo,
       StoreProducts: {},
       quantity: 4,
-      selectedItems: [],
+      selectedItems: [
+         {id:1,name: 'Iphone',price: 5000},
+         {id:2, name: 'Laptop',price: 3500}
+      ],
       showCart: false
     }
   },
