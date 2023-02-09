@@ -21,10 +21,10 @@
         </ul>
       </div>
     </div>
-      <section v-if="showCart" class="relative hidden md:block">
+      <section v-if="showCart" class="relative hidden lg:block">
       <!-- Cart modal information -->
         <div class="arrowUp z-20"></div>
-        <div class="absolute w-96 h-auto min-h-20 bg-white px-4 py-4 flex justify-center flex-col z-10 right-1 rounded-md">
+        <div class="absolute w-96 h-auto min-h-20 bg-white px-4 py-4 flex justify-center flex-col z-10 right-0 rounded-md">
           <p class="self-left">Cart Items</p>
           <div v-if="selectedItems.length">
             <ul class="px-2">
