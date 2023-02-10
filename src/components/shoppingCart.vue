@@ -40,7 +40,7 @@ export default {
   <div class="mt-4">
     <a href="#" target="blank">
       <figure class="rounded-lg overflow-hidden w-full h-36 lg:h-auto">
-        <img class="w-full object-cover h-full" src="..\images\Banner.jpg" alt="">
+        <img class="w-full object-cover h-full" src="..\images\BannerShop.jpg" alt="">
       </figure>
     </a>
     <section>
@@ -56,9 +56,11 @@ export default {
           </a>
           <!-- Image and Price for mobile -->
           <div class="lg:hidden px-3">
-            <p class="mt-3 font-bold text-sm text-slate-600 text-ellipsis overflow-hidden truncate w-[15ch]">{{item.name}}</p>
-            <p class="text-xs text-slate-500">{{item.category}}</p>
-            <div class="flex justify-between items-center mb-4">
+            <p class="mt-2 font-bold text-sm text-slate-600 text-ellipsis overflow-hidden truncate w-[15ch]">{{item.name}}</p>
+            <span class="flex gap-2 py-1">
+              <p v-for="tag in item.category" :key="tag.id" class="px-1.5 bg-[#c9c9c9] py-0.5 rounded-lg text-[10px] text-slate-500">{{tag}}</p>
+            </span>
+            <div class="flex justify-between items-center mb-3">
               <p class="text-slate-500">${{priceFixed(item.price)}}</p>
               <div class="flex">
                 <a @click="buyNewItem" data-store="item" class="flex w-4 h-4 lg:w-48 p-4 bg-teal-600 transition-all items-center justify-center text-white text-center rounded-full"><i class="pi pi-shopping-bag"></i></a>
@@ -71,7 +73,9 @@ export default {
               <div class="mt-2 flex justify-between items-center">
                 <p class="font-bold text-sm text-slate-600 text-ellipsis overflow-hidden truncate">{{item.name}}</p>
               </div>
-                <p class="text-xs text-slate-500">{{item.category}}</p>
+              <span class="flex gap-2 py-1">
+                <p v-for="tag in item.category" :key="tag.id" class="px-1.5 bg-[#c9c9c9] py-0.5 rounded-lg text-[10px] text-slate-500">{{tag}}</p>
+              </span>
                 <div class="mt-4 mb-5 flex justify-between items-center">
                   <a  @click="buyNewItem" class="block py-1 w-3/5 bg-teal-600 border-teal-900 transition-all hover:bg-emerald-900 text-white text-center rounded-full select-none"><i class="hidden lg:contents pi pi-shopping-bag mr-2"></i>Add to Cart</a>
                   <p class="text-slate-500 text-lg font-bold">${{priceFixed(item.price)}}</p>
