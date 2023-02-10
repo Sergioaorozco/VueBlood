@@ -53,7 +53,6 @@
 <script setup>
 import { useProductStore } from '../stores/ProductStore.js';
 const productStore = useProductStore();
-productStore.pullProducts();
 productStore.priceFixed();
 </script>
 

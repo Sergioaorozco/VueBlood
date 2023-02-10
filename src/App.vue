@@ -2,10 +2,6 @@
 import loginUser from './components/loginUser.vue';
 import shoppingCart from './components/shoppingCart.vue';
 import { useProductStore } from './stores/ProductStore.js';
-const productStore= useProductStore();
-productStore.pullProducts();
-productStore.priceFixed();
-
 </script>
 <script>
 export default {

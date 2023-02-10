@@ -1,6 +1,5 @@
 import { defineStore } from 'pinia';
-// import axios from 'axios';
-// Products in Our app
+import { getDatabase, ref, child, onValue} from "firebase/database";
 
 export const useProductStore = defineStore('productStore', {
   // States
@@ -10,10 +9,13 @@ export const useProductStore = defineStore('productStore', {
       }
     },
   actions: {
-    async pullProducts() {
-      const response = await fetch('https://fakestoreapi.com/products?limit=10')
-      let items = await response.json();
-      return this.products.push(...items);
+    pullProducts() {
+      const dbRef = ref(getDatabase());
+      const pullData = child(dbRef, '/vueshop')
+      onValue(pullData, (snapshot) => {
+          const data = snapshot.val();
+          this.products.push(...data);
+      })
     },
     priceFixed(price){
       return Number(price).toLocaleString('en-us', {maximumFractionDigits: 2, minimumFractionDigits:2});

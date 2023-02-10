@@ -1,0 +1,146 @@
+[
+  {
+    "name": "Bottle Origins",
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/1675982255529.jpeg?alt=media&token=711ed999-0471-4d34-8ba7-a2f1905a5da5",
+    "id":1,
+    "ref":"originBot-2023",
+    "price": 25,
+    "stock": 100,
+    "gallery":["https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/1675982255529.jpeg?alt=media&token=711ed999-0471-4d34-8ba7-a2f1905a5da5", "https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/1675982314082.jpeg?alt=media&token=061a5bee-0292-439c-afca-baba07652ec2","url3", "url4", "url5"]
+  },
+  {
+    "name": "Sport Bottle",
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/1675982279931.jpeg?alt=media&token=f064bb8b-ae6c-43e0-a37f-fbd786e4b937",
+    "id":2,
+    "ref":"spb-2023",
+    "price": 35,
+    "stock": 100,
+    "gallery":["https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/1675982279931.jpeg?alt=media&token=f064bb8b-ae6c-43e0-a37f-fbd786e4b937", "url2","url3", "url4", "url5"]
+  },
+  {
+    "name": "Rustic Plate",
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/1675982283029.jpeg?alt=media&token=306e55f0-6202-4bec-a901-d2dde33643c3",
+    "id":3,
+    "ref":"rtPlate-2023",
+    "price": 25,
+    "stock": 100,
+    "gallery":["https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/1675982285539.jpeg?alt=media&token=ebd60f8b-a6fa-4502-8a5d-91231ffbd78d", "https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/1675982283029.jpeg?alt=media&token=306e55f0-6202-4bec-a901-d2dde33643c3", "https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/1675982379199.jpeg?alt=media&token=23dc6754-d496-4256-8eb7-2bbb03a0b88b"]
+  },
+  {
+    "name": "Modern Clock",
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/1675982292371.jpeg?alt=media&token=331a220c-c061-4b4f-bdf5-b17b65c65262",
+    "id":4,
+    "ref":"modClock-2023",
+    "price": 120,
+    "stock": 100,
+    "gallery":["https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/1675982292371.jpeg?alt=media&token=331a220c-c061-4b4f-bdf5-b17b65c65262", "url2","url3", "url4", "url5"]
+  },
+  {
+    "name": "Clean Tools",
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/1675982295650.jpeg?alt=media&token=c36f1a36-a894-4ef7-8781-8d1ba91eefe3",
+    "id":5,
+    "ref":"clTools-2023",
+    "price": 15,
+    "stock": 100,
+    "gallery":["https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/1675982295650.jpeg?alt=media&token=c36f1a36-a894-4ef7-8781-8d1ba91eefe3", "url2","url3", "url4", "url5"]
+  },
+  {
+    "name": "Minimal Bottle",
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/1675982299309.jpeg?alt=media&token=92f2be40-d8f7-4298-93a3-1482db07fdea",
+    "id":6,
+    "ref":"minBot-2023",
+    "price": 70,
+    "stock": 100,
+    "gallery":["https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/1675982299309.jpeg?alt=media&token=92f2be40-d8f7-4298-93a3-1482db07fdea", "https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/1675982301600.jpeg?alt=media&token=828a1325-78c5-4750-9de0-aedb056603bc","url3", "url4", "url5"]
+  },
+  {
+    "name": "Elegant Chair",
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/1675982307920.jpeg?alt=media&token=5fcc54f6-2006-4d2e-8489-03855a3b9e8a",
+    "id":7,
+    "ref":"elgChair-2023",
+    "price": 200,
+    "stock": 100,
+    "gallery":["https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/1675982307920.jpeg?alt=media&token=5fcc54f6-2006-4d2e-8489-03855a3b9e8a", "url2","url3", "url4", "url5"]
+  },
+  {
+    "name": "Eco Bag",
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/1675982311472.jpeg?alt=media&token=f4a5d008-21ec-4131-ab81-152e88dd032b",
+    "id":8,
+    "ref":"ecoBag-2023",
+    "price": 70,
+    "stock": 500,
+    "gallery":["https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/1675982311472.jpeg?alt=media&token=f4a5d008-21ec-4131-ab81-152e88dd032b", "url2","url3", "url4", "url5"]
+  },
+  {
+    "name": "Glass bottle",
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/1675982320955.jpeg?alt=media&token=b8cc9e1c-e610-4c7c-871d-fb55c709073f",
+    "id":9,
+    "ref":"glassBot-2023",
+    "price": 60,
+    "stock": 30,
+    "gallery":["https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/1675982320955.jpeg?alt=media&token=b8cc9e1c-e610-4c7c-871d-fb55c709073f", "url2","url3", "url4", "url5"]
+  },
+  {
+    "name": "Board Mug",
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/1675982331802.jpeg?alt=media&token=b5141c6d-c39c-475a-bdb5-cde431bb4a6d",
+    "id":10,
+    "ref":"boardMug-2023",
+    "price": 40,
+    "stock": 300,
+    "gallery":["https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/1675982331802.jpeg?alt=media&token=b5141c6d-c39c-475a-bdb5-cde431bb4a6d", "url2","url3", "url4", "url5"]
+  },
+  {
+    "name": "Dot Ceramic",
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/1675982323962.jpeg?alt=media&token=e4f2a68f-cf5c-4e42-a408-9529287e64be",
+    "id":11,
+    "ref":"dotCeram-2023",
+    "price": 300,
+    "stock": 5,
+    "gallery":["https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/1675982323962.jpeg?alt=media&token=e4f2a68f-cf5c-4e42-a408-9529287e64be", "url2","url3", "url4", "url5"]
+  },
+  {
+    "name": "Wooden Plate",
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/Image-1-12-500x570.jpg?alt=media&token=9d184961-6b4c-42e9-aa15-0992c2bb58dc",
+    "id":12,
+    "ref":"woodPlate-2023",
+    "price": 120,
+    "stock": 500,
+    "gallery":["https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/Image-1-12-500x570.jpg?alt=media&token=9d184961-6b4c-42e9-aa15-0992c2bb58dc", "https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/image-6-1-500x570.jpg?alt=media&token=1e97efb5-de71-4bce-acb5-43056b8f056c","url3", "url4", "url5"]
+  },
+  {
+    "name": "Tropical Bag",
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/Image-1-21-500x570.jpg?alt=media&token=ec405af4-4839-4514-b1c6-03ef35fd6bf0",
+    "id":13,
+    "ref":"tropBag-2023",
+    "price": 40,
+    "stock": 200,
+    "gallery":["https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/Image-1-21-500x570.jpg?alt=media&token=ec405af4-4839-4514-b1c6-03ef35fd6bf0", "https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/Image-2-15-500x570.jpg?alt=media&token=0ec5236e-07c3-4493-bc6e-37168e3e89f3","url3", "url4", "url5"]
+  },
+  {
+    "name": "Macrame Plant",
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/Image-1-6-500x570.jpg?alt=media&token=97f0afd9-b3f4-4a42-9ea7-bf08cdd33493",
+    "id":14,
+    "ref":"macrPlant-2023",
+    "price": 120,
+    "stock": 100,
+    "gallery":["https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/Image-1-6-500x570.jpg?alt=media&token=97f0afd9-b3f4-4a42-9ea7-bf08cdd33493", "url2","url3", "url4", "url5"]
+  },
+  {
+    "name": "Mate Collection",
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/Image-2-7-500x570.jpg?alt=media&token=4f7d56ff-fad6-4449-89ed-0e00f44dae5c",
+    "id":15,
+    "ref":"mateColl-2023",
+    "price": 90,
+    "stock": 100,
+    "gallery":["https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/Image-2-7-500x570.jpg?alt=media&token=4f7d56ff-fad6-4449-89ed-0e00f44dae5c", "https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/Image-3-500x570.jpg?alt=media&token=304a6454-d396-4415-b47e-896508c8c463","url3", "url4", "url5"]
+  },
+  {
+    "name": "IphoneX",
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/Iphone11.png?alt=media&token=bdc1e35f-a1e5-4b08-9d7a-d7de2091ec45",
+    "id":16,
+    "ref":"ip-2023",
+    "price": 400,
+    "stock": 100,
+    "gallery":["https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/Iphone11.png?alt=media&token=bdc1e35f-a1e5-4b08-9d7a-d7de2091ec45", "https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/Gallery02.jfif?alt=media&token=4b735240-6a4d-4a52-a1a4-72b7c78e854a","https://firebasestorage.googleapis.com/v0/b/vueshop-3dd1a.appspot.com/o/gallery01.jfif?alt=media&token=743429e4-f547-4db9-8ab9-d3a4e3abe869"]
+  }
+]
