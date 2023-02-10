@@ -46,7 +46,7 @@ export default {
     <section>
       <h2 class="text-xl font-medium text-slate-600 mt-4 mb-4">Recent Products</h2>
       <p-message v-show="newItem" :life=6000 :sticky='false' severity="success">You successfully added this item to the cart.</p-message>
-      <div class="lg:grid lg:grid-cols-4 flex gap-x-10 gap-y-14 overflow-auto mb-40">
+      <div class="lg:grid lg:grid-cols-4 flex gap-x-5 lg:gap-x-10 gap-y-14 overflow-auto mb-40">
         <!-- Article for the Store -->
         <article v-for="item in productStore.products" :key="item.id" class="bg-[#eeeeee] rounded-lg flex justify-between flex-col">
           <a href="#" target="blank">
