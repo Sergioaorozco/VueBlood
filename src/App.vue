@@ -25,9 +25,14 @@ export default {
     <nav class="border-b-stone-100 border-b-2">
       <v-login/>
     </nav>
-    <main class="wrapper mt-4">
+    <main class="wrapper mt-2">
       <v-cart/>
     </main>
+    <footer class="bg-stone-50 py-5 border-t-stone-100 border-t-2">
+      <div class="wrapper">
+        <p class="text-slate-600">Footer made by Checho</p>
+      </div>
+    </footer>
   </div>
 </template>
 
