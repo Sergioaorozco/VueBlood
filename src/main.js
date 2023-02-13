@@ -17,8 +17,6 @@ const firebaseConfig = {
   measurementId: import.meta.env.VITE_VUE_MEASUREMENT_ID
 };
 
-
-
 // Importing Styles
 import './style.css'
 import 'primevue/resources/themes/saga-blue/theme.css'
@@ -27,7 +25,6 @@ import 'primeicons/primeicons.css'
 
 // Initialize PrimeVue, Firebase and Vue
 const app = initializeApp(firebaseConfig);
-console.log(app)
 
 const pinia = createPinia();
 const vue = createApp(App);
