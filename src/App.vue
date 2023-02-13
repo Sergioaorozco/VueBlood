@@ -2,6 +2,9 @@
 import loginUser from './components/loginUser.vue';
 import shoppingCart from './components/shoppingCart.vue';
 import { useProductStore } from './stores/ProductStore.js';
+
+const apiKey = import.meta.env.VITE_VUE_KEY
+console.log(apiKey)
 </script>
 <script>
 export default {

@@ -1,23 +1,34 @@
 // Components import
 import { createApp } from 'vue'
 import { createPinia } from 'pinia';
-import { initializeApp } from "firebase/app";
-import { getDatabase } from 'firebase/database';
+import { initializeApp,  } from "firebase/app";
 // import firebase from 'firebase'
 import App from './App.vue';
 import PrimeVue from 'primevue/config';
 
 // SDK Information
+// const firebaseConfig = {
+//   apiKey: "AIzaSyC4PG0KkCwepCOOAJSB-XqXnRyPibj9978",
+//   authDomain: "vueshop-3dd1a.firebaseapp.com",
+//   databaseURL: "https://vueshop-3dd1a-default-rtdb.firebaseio.com",
+//   projectId: "vueshop-3dd1a",
+//   storageBucket: "vueshop-3dd1a.appspot.com",
+//   messagingSenderId: "916696338688",
+//   appId: "1:916696338688:web:158f5e4c50c238457023e5",
+//   measurementId: "G-PYYZ0KCBEY"
+// };
+
 const firebaseConfig = {
-  apiKey: "AIzaSyC4PG0KkCwepCOOAJSB-XqXnRyPibj9978",
-  authDomain: "vueshop-3dd1a.firebaseapp.com",
-  databaseURL: "https://vueshop-3dd1a-default-rtdb.firebaseio.com",
-  projectId: "vueshop-3dd1a",
-  storageBucket: "vueshop-3dd1a.appspot.com",
-  messagingSenderId: "916696338688",
-  appId: "1:916696338688:web:158f5e4c50c238457023e5",
-  measurementId: "G-PYYZ0KCBEY"
+  apiKey: import.meta.env.VITE_VUE_KEY,
+  authDomain: import.meta.env.VITE_VUE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_VUE_DB_URL,
+  projectId: import.meta.env.VITE_VUE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_VUE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_VUE_MSG_ID,
+  appId: import.meta.env.VITE_VUE_APP_ID,
+  measurementId: import.meta.env.VITE_VUE_MEASUREMENT_ID
 };
+console.log(import.meta.env.VITE_VUE_AUTH_DOMAIN)
 
 // Importing Styles
 import './style.css'
