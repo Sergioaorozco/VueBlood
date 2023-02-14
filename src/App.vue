@@ -30,7 +30,7 @@ export default {
     </main>
     <footer class="bg-stone-50 py-5 border-t-stone-100 border-t-2">
       <div class="wrapper">
-        <p class="text-slate-600">Footer made by Checho</p>
+        <p class="text-slate-600">VueBlood 2023</p>
       </div>
     </footer>
   </div>

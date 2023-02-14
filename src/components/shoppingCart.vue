@@ -58,7 +58,7 @@ export default {
           <div class="lg:hidden px-3">
             <p class="mt-2 font-bold text-sm text-slate-600 text-ellipsis overflow-hidden truncate w-[15ch]">{{item.name}}</p>
             <span class="flex gap-2 py-1">
-              <p v-for="tag in item.category" :key="tag.id" class="px-1.5 bg-[#c9c9c9] py-0.5 rounded-lg text-[10px] text-slate-500">{{tag}}</p>
+              <p v-for="tag in item.category" :key="tag.id" class="px-1.5 bg-[#c9c9c9] py-0.5 rounded-md text-[10px] text-slate-500">{{tag}}</p>
             </span>
             <div class="flex justify-between items-center mb-3">
               <p class="text-slate-500">${{priceFixed(item.price)}}</p>
@@ -74,7 +74,7 @@ export default {
                 <p class="font-bold text-sm text-slate-600 text-ellipsis overflow-hidden truncate">{{item.name}}</p>
               </div>
               <span class="flex gap-2 py-1">
-                <p v-for="tag in item.category" :key="tag.id" class="px-1.5 bg-[#c9c9c9] py-0.5 rounded-lg text-[10px] text-slate-500">{{tag}}</p>
+                <p v-for="tag in item.category" :key="tag.id" class="px-1.5 bg-[#c9c9c9] py-0.5 rounded-md text-[10px] text-slate-500">{{tag}}</p>
               </span>
                 <div class="mt-4 mb-5 flex justify-between items-center">
                   <a  @click="buyNewItem" class="block py-1 w-3/5 bg-teal-600 border-teal-900 transition-all hover:bg-emerald-900 text-white text-center rounded-full select-none"><i class="hidden lg:contents pi pi-shopping-bag mr-2"></i>Add to Cart</a>
