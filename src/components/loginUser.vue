@@ -36,7 +36,7 @@
                   </span>
                 </div>
               </li>
-              <li class="mt-6 mb-4 font-bold text-lg text-slate-500">Order Total<span class="float-right font-normal">${{productStore.priceFixed(100)}}</span></li>
+              <li class="mt-6 mb-4 font-bold text-lg text-slate-500">Order Total<span class="float-right font-normal">${{productStore.priceFixed(totalCart())}}</span></li>
             </ul>
             <div class="mt-2 flex gap-3 justify-between">
               <a href="#" class="px-4 py-1 w-full rounded-full text-center bg-teal-600 text-white hover:bg-teal-900" target="_blank">Checkout</a>
@@ -65,11 +65,16 @@ components: {
   Message
 }
 
-const quantity = reactive({ count: 0 });
+function totalCart() {
+  if(productStore.cartItems.length) {
+   return productStore.cartItems.map(item => item.price).reduce((acc, curr) => acc + curr)
+  }
+}
+
 
 let showCart = ref(false);
 function displayCart(){ showCart.value = true; };
-function closeCart() { showCart .value= false; };
+function closeCart() { showCart.value = false; };
 
 
 </script>;
