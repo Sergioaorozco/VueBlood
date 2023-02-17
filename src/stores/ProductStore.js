@@ -25,6 +25,10 @@ export const useProductStore = defineStore('productStore',{
       const itemIndex = this.cartItems.findIndex(ci => ci.id == item.id)
       return (itemIndex == -1) && this.cartItems.push({...item});
       
+    },
+    removeItems(item){
+      const itemIndex = this.cartItems.indexOf(item);
+      return (itemIndex !== -1) && this.cartItems.splice(itemIndex, 1);
     }
   }
 })
