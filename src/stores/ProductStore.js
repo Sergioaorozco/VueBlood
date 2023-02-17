@@ -1,11 +1,12 @@
 import { defineStore } from 'pinia';
 import { getDatabase, ref, child, onValue} from "firebase/database";
 
-export const useProductStore = defineStore('productStore', {
+export const useProductStore = defineStore('productStore',{
   // States
   state:() => {
     return {
-      products: []
+      products: [],
+      cartItems: []
       }
     },
   actions: {
@@ -19,8 +20,11 @@ export const useProductStore = defineStore('productStore', {
     },
     priceFixed(price){
       return Number(price).toLocaleString('en-us', {maximumFractionDigits: 2, minimumFractionDigits:2});
+    },
+    addedToCart(item){
+      const itemIndex = this.cartItems.findIndex(ci => ci.id == item.id)
+      return (itemIndex == -1) && this.cartItems.push({...item});
+      
     }
   }
-  // Action
-  // Getters
 })

@@ -15,7 +15,7 @@
               <i class="pi pi-shopping-cart lg:mr-1"></i>
               <span class="hidden lg:contents">Cart</span>
               <!-- Items Quantity -->
-              <div class="rounded-full w-3 h-3 p-2 bg-teal-800 bottom-4 -right-1 text-white border-white border-2 absolute flex justify-center items-center"><span class="text-cart">{{quantity}}</span></div>
+              <div v-if="productStore.cartItems.length != 0" class="rounded-full w-3 h-3 p-2 bg-teal-800 bottom-4 -right-1 text-white border-white border-2 absolute flex justify-center items-center"><span class="text-cart">{{productStore.cartItems.length}}</span></div>
             </a>
           </li>
         </ul>
@@ -26,9 +26,9 @@
         <div class="arrowUp z-20"></div>
         <div class="absolute w-96 h-auto min-h-20 bg-white px-4 py-4 flex justify-center flex-col z-10 right-0 rounded-md">
           <p class="self-left">Cart Items</p>
-          <div v-if="selectedItems.length">
+          <div v-if="productStore.cartItems.length">
             <ul class="px-2">
-              <li v-for="item in selectedItems" :key="item.id" class="flex justify-between items-center border-b-[1px] text-slate-500 text-sm py-2 mt-1">{{item.name}}
+              <li v-for="item in productStore.cartItems" :key="item.id" class="flex justify-between items-center border-b-[1px] text-slate-500 text-sm py-2 mt-1">{{item.name}}
                 <div class="flex items-center gap-2">
                   <span class="">${{productStore.priceFixed(item.price)}}</span>
                   <span class="flex justify-center items-center w-5 h-5 hover:bg-slate-500 rounded-full transition-all hover:text-white border-[1px] border-slate-500 p-0.5">
@@ -52,37 +52,26 @@
 </template>
 <script setup>
 import { useProductStore } from '../stores/ProductStore.js';
+import mainLogo from '../images/mainLogo.svg';
+import {ref, reactive } from 'vue'
+import Message from 'primevue/message';
+import searchProduct from '../components/searchProduct.vue';
 const productStore = useProductStore();
 productStore.priceFixed();
-</script>
 
-<script>
-  import mainLogo from '../images/mainLogo.svg';
-  import Message from 'primevue/message';
-  import searchProduct from '../components/searchProduct.vue';
-  export default {
-  components: {
-    mainLogo,
-    searchProduct,
-    Message
-  },
-  data() {
-    return {
-      mainLogo,
-      StoreProducts: {},
-      quantity: 4,
-      selectedItems: [
-         {id:1,name: 'Iphone',price: 5000},
-         {id:2, name: 'Laptop',price: 3500}
-      ],
-      showCart: false
-    }
-  },
-  methods: {
-    displayCart(){ this.showCart = true; },
-    closeCart() {this.showCart = false; },
-  }
+components: {
+  mainLogo,
+  searchProduct,
+  Message
 }
+
+const quantity = reactive({ count: 0 });
+
+let showCart = ref(false);
+function displayCart(){ showCart.value = true; };
+function closeCart() { showCart .value= false; };
+
+
 </script>;
 
 <style scoped>

@@ -1,7 +1,7 @@
 // Components import
 import { createApp } from 'vue'
 import { createPinia } from 'pinia';
-import { initializeApp,  } from "firebase/app";
+import { initializeApp } from "firebase/app";
 // import firebase from 'firebase'
 import App from './App.vue';
 import PrimeVue from 'primevue/config';

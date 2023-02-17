@@ -1,10 +1,6 @@
-<script setup>
+<script>
 import loginUser from './components/loginUser.vue';
 import shoppingCart from './components/shoppingCart.vue';
-import { useProductStore } from './stores/ProductStore.js';
-
-</script>
-<script>
 export default {
   components: {
     'v-login': loginUser,
@@ -13,7 +9,6 @@ export default {
   data(){
     return {
       userInfo: {},
-      cartArray: [],
       buyItem: false,
     }
   },
