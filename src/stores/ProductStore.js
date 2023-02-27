@@ -12,7 +12,7 @@ export const useProductStore = defineStore('productStore',{
   actions: {
     pullProducts() {
       const dbRef = ref(getDatabase());
-      const pullData = child(dbRef, '/vueshop')
+      const pullData = child(dbRef, '/vueshop/products')
       onValue(pullData, (snapshot) => {
           const data = snapshot.val();
           this.products.push(...data);
