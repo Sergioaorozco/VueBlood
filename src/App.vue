@@ -16,14 +16,14 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="flex justify-between flex-col h-screen">
     <nav class="border-b-stone-100 border-b-2">
       <v-login/>
     </nav>
     <main class="wrapper mt-2">
       <v-cart/>
     </main>
-    <footer class="bg-stone-50 py-5 border-t-stone-100 border-t-2 mt-20 absolute bottom-0 right-0 left-0">
+    <footer class="bg-stone-50 py-5 border-t-stone-100 border-t-2 mt-20">
       <div class="wrapper">
         <p class="text-slate-600">VueBlood 2023</p>
       </div>
