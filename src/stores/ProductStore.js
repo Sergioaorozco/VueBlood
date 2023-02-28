@@ -21,6 +21,9 @@ export const useProductStore = defineStore('productStore',{
     priceFixed(price){
       return Number(price).toLocaleString('en-us', {maximumFractionDigits: 2, minimumFractionDigits:2});
     },
+    wompiFormat(price){
+      return Number(price) * 100;
+    },
     addedToCart(item){
       const itemIndex = this.cartItems.findIndex(ci => ci.id == item.id)
       return (itemIndex == -1) && this.cartItems.push({...item});

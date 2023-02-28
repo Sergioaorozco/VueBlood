@@ -39,7 +39,8 @@
               <li class="mt-6 mb-4 font-bold text-lg text-slate-500">Order Total<span class="float-right font-normal">${{productStore.priceFixed(totalCart())}}</span></li>
             </ul>
             <div class="mt-2 flex gap-3 justify-between">
-              <a href="#" class="px-4 py-1 w-full rounded-full text-center bg-teal-600 text-white hover:bg-teal-900" target="_blank">Checkout</a>
+              <checkoutButton :value="productStore.wompiFormat(totalCart())"/>
+              <!-- <a href="#" class="px-4 py-1 w-full rounded-full text-center bg-teal-600 text-white hover:bg-teal-900" target="_blank">Checkout</a> -->
               <a href="#" class="px-5 py-1 w-full rounded-full text-center border-slate-700 text-slate-700 hover:bg-slate-700 hover:text-white transition-all border-2" target="_blank">See the Cart</a>
             </div>
           </div>
@@ -48,6 +49,7 @@
           <!-- Close Cart -->
         <div  @click="closeCart" class="overlay"></div>
       </section>
+
   </div>
 </template>
 <script setup>
@@ -55,15 +57,12 @@ import { useProductStore } from '../stores/ProductStore.js';
 import mainLogo from '../images/mainLogo.svg';
 import {ref, reactive } from 'vue'
 import Message from 'primevue/message';
+import checkoutButton from '../components/checkoutButton.vue';
 import searchProduct from '../components/searchProduct.vue';
 const productStore = useProductStore();
 productStore.priceFixed();
+productStore.wompiFormat();
 
-components: {
-  mainLogo,
-  searchProduct,
-  Message
-}
 
 function totalCart() {
   if(productStore.cartItems.length) {
