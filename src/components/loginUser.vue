@@ -100,7 +100,7 @@ function closeCart() { showCart.value = false; };
 
 <style scoped>
   @media screen and (min-width: 960px) {
-    :deep.p-dialog { display: none !important; }
+    .p-dialog { display: none !important; }
   }
   .p-message { margin: 3px 0;}
   .cancel.pi { font-size: 8px; }
