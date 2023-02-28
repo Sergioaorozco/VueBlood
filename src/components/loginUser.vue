@@ -45,6 +45,26 @@
           <!-- Close Cart -->
         <div  @click="closeCart" class="overlay"></div>
       </section>
+      <section>
+        <Dialog class="lg:hidden" :visible="showCart" header="Cart Items" :breakpoints="{'960px': '75vw', '640px': '90vw'}" :style="{width: '50vw'}" @update:visible="closeCart">
+          <div v-if="productStore.cartItems.length" class="mt-3">
+            <ul class="px-2">
+              <li v-for="item in productStore.cartItems" :key="item.id" class="flex justify-between items-center border-b-[1px] text-slate-500 text-sm py-2 mt-1">{{item.name}}
+                <div class="flex items-center gap-2">
+                  <span class="">${{productStore.priceFixed(item.price)}}</span>
+                  <span @click="removeItems(item)" class="flex justify-center items-center w-5 h-5 hover:bg-slate-500 rounded-full transition-all hover:text-white border-[1px] border-slate-500 p-0.5">
+                    <i class="cancel pi pi-times"></i>
+                  </span>
+                </div>
+              </li>
+              <li class="mt-6 mb-4 font-bold text-lg text-slate-500">Order Total<span class="float-right font-normal">${{productStore.priceFixed(totalCart())}}</span></li>
+            </ul>
+              <checkoutButton class="w-full" :value="productStore.wompiFormat(totalCart())"/>
+          </div>
+          <Message class="my-0" :closable=false v-else>There are no items in your cart.</Message>
+        </Dialog>
+        <div @click="closeCart" :class="{overlay: showCart}"></div>
+      </section>
 
   </div>
 </template>
@@ -55,6 +75,7 @@ import {ref, reactive } from 'vue'
 import Message from 'primevue/message';
 import checkoutButton from '../components/checkoutButton.vue';
 import searchProduct from '../components/searchProduct.vue';
+import Dialog from 'primevue/dialog';
 const productStore = useProductStore();
 productStore.priceFixed();
 productStore.wompiFormat();
