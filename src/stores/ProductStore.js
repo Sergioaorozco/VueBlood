@@ -19,7 +19,7 @@ export const useProductStore = defineStore('productStore',{
       })
     },
     priceFixed(price){
-      return Number(price).toLocaleString('en-us', {maximumFractionDigits: 2, minimumFractionDigits:2});
+      return Number(price).toLocaleString('es_CO');
     },
     wompiFormat(price){
       return Number(price) * 100;
