@@ -46,7 +46,7 @@
         <div  @click="closeCart" class="overlay"></div>
       </section>
       <section>
-        <Dialog class="lg:hidden md:flex sm:flex"  header="Cart Items" :breakpoints="{'960px': '75vw', '640px': '90vw', '960px': 'hidden'}" :style="{width: '50vw'}" @update:visible="closeCart">
+        <Dialog class="lg:hidden md:flex sm:flex"  header="Cart Items" :breakpoints="{'640px': '90vw'}" :style="{width: '50vw'}" @update:visible="closeCart">
           <div v-if="productStore.cartItems.length" class="mt-3">
             <ul class="px-2">
               <li v-for="item in productStore.cartItems" :key="item.id" class="flex justify-between items-center border-b-[1px] text-slate-500 text-sm py-2 mt-1">{{item.name}}
