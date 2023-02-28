@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia';
 import { getDatabase, ref, child, onValue} from "firebase/database";
+import { compileScript } from 'vue/compiler-sfc';
 
 export const useProductStore = defineStore('productStore',{
   // States
