@@ -45,7 +45,7 @@
           <!-- Close Cart -->
         <div  @click="closeCart" class="overlay"></div>
       </section>
-      <section class="lg:hidden block">
+      <section class="lg:hidden flex">
         <Dialog :visible="displayCart" header="Cart Items" :breakpoints="{'960px': '75vw', '640px': '90vw'}" :style="{width:'50vw'}" @update:visible="closeCart">
           <div v-if="productStore.cartItems.length" class="mt-3">
             <ul class="px-2">
