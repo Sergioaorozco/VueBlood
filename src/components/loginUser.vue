@@ -99,9 +99,6 @@ function closeCart() { showCart.value = false; };
 </script>;
 
 <style scoped>
-  @media screen and (min-width: 960px) {
-    .p-dialog { display: none !important; }
-  }
   .p-message { margin: 3px 0;}
   .cancel.pi { font-size: 8px; }
   .arrowUp {

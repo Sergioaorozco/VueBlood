@@ -30,3 +30,9 @@
   margin-bottom: 1em;
   margin-top: 0.5em;
 }
+
+/* Breakpoints */
+
+@media screen and (min-width: 960px) {
+  .p-dialog { display: none !important; }
+}
