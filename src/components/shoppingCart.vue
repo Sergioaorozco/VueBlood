@@ -19,7 +19,7 @@ function addToCart(product) {
     </a>
     <section>
       <h2 class="text-xl font-medium text-slate-600 mt-4 mb-4">Recent Products</h2>
-      <div class="lg:grid lg:grid-cols-4 flex gap-x-5 lg:gap-x-10 gap-y-14 overflow-auto">
+      <div class="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-x-5 lg:gap-x-10 gap-y-14 overflow-auto">
         <!-- Article for the Store -->
         <article v-for="item in productStore.products" :key="item.id" class="bg-[#eeeeee] rounded-lg flex justify-between flex-col">
           <a href="#" target="blank">
