@@ -99,7 +99,9 @@ function closeCart() { showCart.value = false; };
 </script>;
 
 <style scoped>
-  .hiddenModal { display: none !important; }
+  @media screen and (min-width: 960px) {
+    .hiddenModal { display: none !important; }
+  }
   .p-message { margin: 3px 0;}
   .cancel.pi { font-size: 8px; }
   .arrowUp {
